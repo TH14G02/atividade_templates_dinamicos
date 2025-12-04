@@ -31,11 +31,25 @@ CURSOS = [
 
 @app.route("/")
 def index():
-    return render_template("index.html",curso = CURSOS)
+    return render_template("index.html",CURSOS = CURSOS)
 
 @app.route("/contact")
 def contact():
     return render_template("contact.html")
+
+@app.route("/curso/<int:id>")
+def curso(id):
+    # procura o curso com o id recebido
+    curso_selecionado = None
+    for c in CURSOS:
+        if c.get("id") == id:
+            curso_selecionado = c
+            break
+
+    if curso_selecionado:
+        return render_template("curso.html", curso=curso_selecionado)
+    else:
+        return "Curso não encontrado", 404
 
 
 if __name__ == '__main__':

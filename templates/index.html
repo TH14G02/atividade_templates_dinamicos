@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block title %}
-    templates dinamicos 
+templates dinamicos
 {% endblock %}
 
 {% block content %}
@@ -9,9 +9,10 @@
 {% for curso in CURSOS %}
     <div class="card">
         <h3>{{ curso.nome }}</h3>
-        <p>{{ curso.descricao }}</p>
+        <p>{{ curso['descrição'] }}</p>
 
         <a class="botao" href="{{ url_for('curso', id=curso.id) }}">Detalhes</a>
     </div>
-    {% endfor %}
+{% endfor %}
+
 {% endblock %}
