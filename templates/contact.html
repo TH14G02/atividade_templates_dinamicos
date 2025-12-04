@@ -3,5 +3,15 @@
 {% block title %} Nos Cotate {% endblock %}
 
 {% block content %}
-<P>site super legal</P>
+
+<form class="formulario">
+    <label>Digite seu nome:</label>
+    <input type="text", placeholder="Juninho">
+    <label>Digite seu Email:</label>
+    <input type="text", placeholder="juninho123@gmail.com">
+    <label>Digite sua mensagem:</label>
+    <input type="text">
+
+<a class="botao" href="{{ url_for('index') }}">Voltar</a>
+</form>
 {% endblock %}
