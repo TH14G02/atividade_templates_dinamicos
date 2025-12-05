@@ -11,7 +11,7 @@ Portal de cursos
     {% for curso in CURSOS %}
         <div class="card">
             <h3>{{ curso.nome }}</h3>
-            <p>{{ curso['descrição'] }}</p>
+            <p>{{ curso.descrição }}</p>
             <a class="botao" href="{{ url_for('curso', id=curso.id) }}">Detalhes</a>
         </div>
     {% endfor %}
