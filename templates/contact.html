@@ -1,17 +1,28 @@
 {% extends "base.html" %}
 
-{% block title %} Nos Cotate {% endblock %}
+{% block title %}Contato{% endblock %}
 
 {% block content %}
+<div class="contact-container">
 
-<form class="formulario">
-    <label>Digite seu nome:</label>
-    <input type="text", placeholder="Juninho">
-    <label>Digite seu Email:</label>
-    <input type="text", placeholder="juninho123@gmail.com">
-    <label>Digite sua mensagem:</label>
-    <input type="text">
+    <h2>Entre em Contato</h2>
 
-<a class="botao" href="{{ url_for('index') }}">Voltar</a>
-</form>
+    <p class="contact-info">
+        Preencha o formulário abaixo e retornaremos em breve.
+    </p>
+
+    <form class="contact-form">
+        <label>Nome</label>
+        <input type="text" placeholder="Seu nome">
+
+        <label>Email</label>
+        <input type="email" placeholder="exemplo@email.com">
+
+        <label>Mensagem</label>
+        <textarea rows="4" placeholder="Escreva sua mensagem..."></textarea>
+
+        <button type="submit">Enviar</button>
+    </form>
+
+</div>
 {% endblock %}

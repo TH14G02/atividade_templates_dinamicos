@@ -1,3 +1,25 @@
 {% extends "base.html" %}
 
-{% block title %}cursos{% endblock %}
+{% block content %}
+
+<div class="curso-detalhe-container">
+
+    <div class="curso-detalhe-card">
+
+        {% if curso.imagem %}
+        <img src="{{ curso.imagem }}" alt="Imagem do curso {{ curso.nome }}">
+        {% else %}
+        <img src="{{ url_for('static', filename='img/placeholder.jpg') }}" alt="Imagem não disponível">
+        {% endif %}
+
+        <h2>{{ curso.nome }}</h2>
+
+        <p class="descricao">{{ curso.descrição }}</p>
+
+        <p class="carga"><strong>Carga Horária:</strong> {{ curso.carga_horaria }}</p>
+
+    </div>
+
+</div>
+
+{% endblock %}
