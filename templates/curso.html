@@ -1,5 +1,7 @@
 {% extends "base.html" %}
 
+{% block title %}Detalhes do curso - {{ curso.nome }}{% endblock %}
+
 {% block content %}
 
 <div class="curso-detalhe-container">
@@ -14,7 +16,7 @@
 
         <h2>{{ curso.nome }}</h2>
 
-        <p class="descricao">{{ curso.descrição }}</p>
+        <p class="descricao">{{ curso.descrição_detalhada}} </p>
 
         <p class="carga"><strong>Carga Horária:</strong> {{ curso.carga_horaria }}</p>
 
